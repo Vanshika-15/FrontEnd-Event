@@ -1,0 +1,96 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="light">
+    <h6 >Conference</h6>
+    <ion-list lines="none">
+      <ion-item routerLink="/tabs/tab1">
+        <ion-icon name="calendar"></ion-icon> &nbsp;
+        <ion-label >Schedule</ion-label>
+      </ion-item>
+      <ion-item routerLink="/tabs/tab2">
+        <ion-icon name="people"></ion-icon> &nbsp;
+        <ion-label>Speakers</ion-label>
+      </ion-item>
+      <ion-item routerLink="/tabs/tab3">
+        <ion-icon name="map"></ion-icon> &nbsp;
+        <ion-label>Map</ion-label>
+      </ion-item>
+      <ion-item routerLink="/tabs/tab4">
+        <ion-icon name="information-circle"></ion-icon> &nbsp;
+        <ion-label>About</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <h6 >Account</h6>
+    <ion-list lines="none">
+      <ion-item routerLink="/auth/login">
+        <ion-icon name="person"></ion-icon> &nbsp;
+        <ion-label>Login</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="help"></ion-icon> &nbsp;
+        <ion-label>Support</ion-label>
+      </ion-item>
+      <ion-item routerLink="/auth/register">
+        <ion-icon name="person"></ion-icon> &nbsp;
+        <ion-label>Signup</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="information-circle"></ion-icon> &nbsp;
+        <ion-label>Dark Mode</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <h6 >Tutorial</h6>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-icon name="hammer"></ion-icon> &nbsp;
+        <ion-label>Tutorial</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+       Speakers
+      </ion-title>
+    </ion-toolbar>          
+  </ion-header>
+  <ion-content>
+    <ion-card  *ngFor = "let demo of Speaker">
+      <ion-card-header>
+        <ion-card-title>
+            {{demo.speakerName}} 
+             </ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>Session</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Session2</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Session2</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    
+      <ion-button fill="clear"><ion-icon name="logo-twitter"> </ion-icon> Tweet</ion-button>
+      <ion-button fill="clear"><ion-icon name="share"></ion-icon> Share</ion-button>
+      <ion-button fill="clear"><ion-icon name="call"></ion-icon>Contact</ion-button>
+    </ion-card>
+  </ion-content>
+</div>

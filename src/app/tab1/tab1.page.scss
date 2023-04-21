@@ -1,0 +1,41 @@
+ion-button{
+    height: 30px;
+}
+ion-toolbar{
+ 
+    --background:white;
+}
+
+ion-segment-button::part(indicator-background) {
+  background:rgb(94, 132, 247);
+  }
+  
+  /* Material Design styles */
+  ion-segment-button.md::part(native) {
+    color: #000;
+  }
+  
+  .segment-button-checked.md::part(native) {
+    color:rgb(94, 132, 247);
+  }
+  
+  ion-segment-button.md::part(indicator-background) {
+    height: 4px;
+  }
+  
+  /* iOS styles */
+  ion-segment-button.ios::part(native) {
+    color:rgb(94, 132, 247);
+  }
+  
+  .segment-button-checked.ios::part(native) {
+    color: #fff;
+  }
+  
+  // ion-segment-button.ios::part(indicator-background) {
+  // }
+  .break{
+    border:1px solid black;
+    padding:5px;
+    border-left: 2px solid blue;
+}
